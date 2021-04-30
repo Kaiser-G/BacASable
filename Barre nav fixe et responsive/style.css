@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.main {
+  height: 100vh;
+  text-align: center;
+}
+.main .banniere {
+  position: relative;
+  width: 100%;
+  margin-bottom: -10px;
+}
+
+nav {
+  width: 100%;
+  text-align: center;
+  left: 0;
+  background-color: red;
+}
+
+.top-nav {
+  position: fixed;
+  top: 0;
+}
+
+/* .bottom-nav {
+  position: absolute;
+  bottom: 0;
+} */
+.main ul {
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+}
+
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 20px;
+  font-size: 1.5em;
+  color: white;
+}
+
+li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+
+li a:hover {
+  color: black;
+}
+
+.main .buttom-nav {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+.main ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+
+.main li a {
+  display: block;
+
+  text-decoration: none;
+}
+
+.main li a:hover,
+.main .menu-btn:hover {
+  background-color: #f4f4f4;
+}
+
+.main .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/* menu */
+
+.main .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+/* menu icon */
+
+h1 {
+  margin-top: -250px;
+}
+
+.main .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.main .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 18px;
+}
+
+.main .menu-icon .navicon:before,
+.main .menu-icon .navicon:after {
+  background: #333;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.main .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.main .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.main .menu-btn {
+  display: none;
+}
+
+.main .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.main .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.main .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.main .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.main .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.main .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* §§§§§§§§§§§§§§§§§§§§§§  RESPONSIVE §§§§§§§§§§§§§§§§§§§§§§§§§ */
+
+@media (min-width: 600px) {
+  .buttom-nav li {
+    float: left;
+  }
+  .main li a {
+    padding: 20px 30px;
+  }
+  .main .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .main .menu-icon {
+    display: none;
+  }
+}
