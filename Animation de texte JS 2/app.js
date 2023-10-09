@@ -7,10 +7,10 @@ new Typewriter(txtAnim, {
 
   .changeDelay(20)
   .typeString(
-    "<span style='color: white'> Bonjour, aujourd'hui nous allons faire une recette à la truffe  </span>"
+    "<span style='color: white'> Bonjour,<br> aujourd'hui nous allons<br> faire  une recette à la truffe :<br></span>"
   )
   .pauseFor(300)
-  .typeString("<strong>, Dev Full-Stack<strong> !")
+  .typeString("<strong>Dev Full-Stack<strong> !")
   .pauseFor(1000)
   .deleteChars(13)
   .typeString("<span style='color: #27ae60'> CSS</span> !")
@@ -22,5 +22,5 @@ new Typewriter(txtAnim, {
   .typeString("<span style='color: red'> HTML</span> !")
   .pauseFor(1000)
   .deleteChars(12)
-  .typeString("Bonjour")
+  .typeString("<span style='color: white'> <br>Bon Appétit</span>")
   .start();

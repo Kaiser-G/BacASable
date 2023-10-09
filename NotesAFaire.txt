@@ -1,0 +1,4 @@
+Les barres nav sont a finir il faut en garder une seule.
+Pour les finir s'aider du dossier croix burger.
+
+Les cartes animées ne fonctionne plus, engrder qu'une.
