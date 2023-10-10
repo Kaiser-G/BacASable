@@ -77,33 +77,37 @@ h1 {
 
 /* §§§§§§§§§§§§§§§§§§§§§§  RESPONSIVE §§§§§§§§§§§§§§§§§§§§§§§§§ */
 
+/* Pour les petits écrans (largeur <= 600px) */
 @media screen and (max-width: 600px) {
-  #burger li:not(:last-child),
-  .dropdown .dropbtn {
+  /* Masquer tous les éléments li du menu burger sauf le dernier */
+  #burger ul li:not(:last-child) {
     display: none;
   }
 
-  #burger li .icon {
+  /* Afficher l'icône du menu burger (assurez-vous que l'icône est présente dans le HTML) */
+  #burger .icon {
     display: block;
-
     color: white;
   }
-}
 
-@media screen and (max-width: 600px) {
-  #burger .responsive {
+  /* Ajuster la présentation du menu burger */
+  #burger.responsive {
     position: relative;
   }
-  #burger .responsive .icon {
+
+  #burger.responsive .icon {
     position: absolute;
     right: 0;
     top: 0;
   }
-  #burger .responsive li {
+
+  #burger.responsive ul li {
     float: none;
     display: block;
     text-align: center;
   }
+
+  /* Ajuster le style du titre h1 */
   h1 {
     margin-top: -350px;
   }

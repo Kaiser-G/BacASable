@@ -13,9 +13,9 @@ window.onscroll = function () {
 
 function myFunction() {
   var x = document.getElementById("burger");
-  if (x.className === "bottom-nav") {
-    x.className += " responsive";
+  if (x.classList.contains("responsive")) {
+    x.classList.remove("responsive");
   } else {
-    x.className = "bottom-nav";
+    x.classList.add("responsive");
   }
 }
